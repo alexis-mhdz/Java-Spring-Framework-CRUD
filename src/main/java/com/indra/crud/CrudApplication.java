@@ -19,8 +19,6 @@ import com.indra.crud.model.JobHistoryIdentity;
 import com.indra.crud.model.Location;
 import com.indra.crud.model.Phone;
 import com.indra.crud.model.Region;
-import com.indra.crud.repository.EmployeesRepository;
-import com.indra.crud.repository.JobHistoryRepository;
 import com.indra.crud.service.CountryServiceImp;
 import com.indra.crud.service.DepartmentServiceImp;
 import com.indra.crud.service.EmployeeServiceImp;
@@ -49,10 +47,6 @@ public class CrudApplication implements CommandLineRunner {
 	private RegionServiceImp regionServiceImp;
 	@Autowired
 	private PhoneServiceImp phoneServiceImp;
-	@Autowired
-	private EmployeesRepository employeesRepository;
-	@Autowired
-	private JobHistoryRepository jobHistoryRepository;
 	
 	public static void main(String[] args) {
 		SpringApplication.run(CrudApplication.class, args);
