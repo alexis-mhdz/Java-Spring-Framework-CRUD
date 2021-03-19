@@ -65,7 +65,8 @@ public class AuthController {
 			
 			redirectAttributes.addFlashAttribute("message", "Usuario registrado correctamente")
 				.addFlashAttribute("alertType", "success");
+			return "redirect:/login";
 		}
-		return "redirect:/";
+		//return "redirect:/";
 	}
 }

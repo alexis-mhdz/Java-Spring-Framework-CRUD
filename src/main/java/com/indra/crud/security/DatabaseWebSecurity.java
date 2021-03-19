@@ -66,6 +66,10 @@ public class DatabaseWebSecurity extends WebSecurityConfigurerAdapter{
 					.antMatchers("/usuarios/", 
 							"usarios/**").hasAnyAuthority("admin", "user")
 					.anyRequest().authenticated()
+			// Errores personalizados
+			.and()
+				.exceptionHandling()
+					.accessDeniedPage("/accessdenied")
 			// Login sin autorización
 			.and()
 				.formLogin().permitAll();
